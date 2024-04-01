@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/navigation_home">
+
+    <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.example.myapplication.ui.home.HomeFragment"
+            android:label="@string/title_home"
+            tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_navigation_home_to_navigation_bed_room"
+                app:destination="@id/navigation_bed_room"/>
+        <action android:id="@+id/action_navigation_home_to_navigation_zal" app:destination="@id/navigation_zal"/>
+        <action android:id="@+id/action_navigation_home_to_gardenFragment" app:destination="@id/gardenFragment"/>
+        <action android:id="@+id/action_navigation_home_to_kitchenFragment" app:destination="@id/kitchenFragment"/>
+        <action android:id="@+id/action_navigation_home_to_juniorHeadSetFragment"
+                app:destination="@id/juniorHeadSetFragment"/>
+        <action android:id="@+id/action_navigation_home_to_vestibuleFragment" app:destination="@id/vestibuleFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigation_bed_room"
+            android:name="com.example.myapplication.ui.dashboard.BedRoomFragment"
+            android:label="BedRoom"
+            tools:layout="@layout/fragment_bed_room"/>
+
+    <fragment
+            android:id="@+id/navigation_zal"
+            android:name="com.example.myapplication.ui.notifications.ZalFragment"
+            android:label="Zal"
+            tools:layout="@layout/fragment_zal"/>
+    <fragment android:id="@+id/gardenFragment" android:name="com.example.myapplication.ui.garden.GardenFragment"
+              android:label="fragment_garden" tools:layout="@layout/fragment_garden"/>
+    <fragment android:id="@+id/kitchenFragment" android:name="com.example.myapplication.ui.kitchen.KitchenFragment"
+              android:label="fragment_kitchen" tools:layout="@layout/fragment_kitchen"/>
+    <fragment android:id="@+id/juniorHeadSetFragment"
+              android:name="com.example.myapplication.ui.juniorHeadSet.JuniorHeadSetFragment"
+              android:label="fragment_junior_head_set" tools:layout="@layout/fragment_junior_head_set"/>
+    <fragment android:id="@+id/vestibuleFragment"
+              android:name="com.example.myapplication.ui.vestibule.VestibuleFragment" android:label="fragment_vestibule"
+              tools:layout="@layout/fragment_vestibule"/>
+</navigation>
