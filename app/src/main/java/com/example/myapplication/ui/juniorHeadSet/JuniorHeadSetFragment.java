@@ -1,63 +1,80 @@
 package com.example.myapplication.ui.juniorHeadSet;
 
 import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import com.example.myapplication.MAdapter;
 import com.example.myapplication.R;
+import com.example.myapplication.databinding.FragmentBedRoomBinding;
+import com.example.myapplication.databinding.FragmentJuniorHeadSetBinding;
+import com.example.myapplication.models.FurnitureModel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link JuniorHeadSetFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class JuniorHeadSetFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private FragmentJuniorHeadSetBinding binding;
+    List<FurnitureModel> list_junior_headset = new ArrayList<>();
+    MAdapter adapter;
+    NavController navController;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public JuniorHeadSetFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment JuniorHeadSetFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static JuniorHeadSetFragment newInstance(String param1, String param2) {
-        JuniorHeadSetFragment fragment = new JuniorHeadSetFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_junior_head_set, container, false);
+
+        binding = FragmentJuniorHeadSetBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        createList();
+        adapter = new MAdapter();
+        adapter.setList_m(list_junior_headset);
+        binding.rvJuniorHeadset.setAdapter(adapter);
+        return root;
+    }
+
+    private void createList() {
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Red Flame", "1690", "Кровать двухспальная размер 2.6м х 2.4м производство Турция," +
+                " матрас набивной пружинный, кокосовая стружка", R.drawable.Download));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Red_sunrise", "1100",
+                " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," + "набивной, специальный состав"
+                , R.drawable.Download_2));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Plot", "1340",
+                " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," + "набивной, специальный состав"
+                , R.drawable.Download_3));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Parlament", "1200",
+                " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," + "набивной, специальный состав"
+                , R.drawable.Download_4));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Red Flame", "1690",
+                "Кровать двухспальная размер 2.6м х 2.4м производство Турция," + " матрас набивной пружинный, кокосовая стружка", R.drawable.Download_5));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Red_sunrise", "1100", " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," +
+                "набивной, специальный состав", R.drawable.Download));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Plot", "1340", " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," +
+                "набивной, специальный состав", R.drawable.Download_2));
+        list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Parlament", "1200", " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," +
+                "набивной, специальный состав", R.drawable.Download_3));
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        binding.btnBack.setOnClickListener(v -> {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+            navController.navigate(R.id.action_juniorHeadSetFragment_to_navigation_home);
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

@@ -33,17 +33,30 @@
             android:id="@+id/navigation_zal"
             android:name="com.example.myapplication.ui.notifications.ZalFragment"
             android:label="Zal"
-            tools:layout="@layout/fragment_zal"/>
+            tools:layout="@layout/fragment_zal">
+        <action android:id="@+id/action_navigation_zal_to_navigation_home" app:destination="@id/navigation_home"/>
+    </fragment>
     <fragment android:id="@+id/gardenFragment" android:name="com.example.myapplication.ui.garden.GardenFragment"
-              android:label="fragment_garden" tools:layout="@layout/fragment_garden"/>
+              android:label="fragment_garden" tools:layout="@layout/fragment_garden">
+        <action android:id="@+id/action_gardenFragment_to_navigation_home" app:destination="@id/navigation_home"/>
+    </fragment>
     <fragment android:id="@+id/kitchenFragment" android:name="com.example.myapplication.ui.kitchen.KitchenFragment"
-              android:label="fragment_kitchen" tools:layout="@layout/fragment_kitchen"/>
+              android:label="fragment_kitchen" tools:layout="@layout/fragment_kitchen">
+        <action android:id="@+id/action_kitchenFragment_to_navigation_home" app:destination="@id/navigation_home"/>
+    </fragment>
     <fragment android:id="@+id/juniorHeadSetFragment"
               android:name="com.example.myapplication.ui.juniorHeadSet.JuniorHeadSetFragment"
-              android:label="fragment_junior_head_set" tools:layout="@layout/fragment_junior_head_set"/>
+              android:label="fragment_junior_head_set" tools:layout="@layout/fragment_junior_head_set">
+        <action android:id="@+id/action_juniorHeadSetFragment_to_navigation_home"
+                app:destination="@id/navigation_home"/>
+    </fragment>
     <fragment android:id="@+id/vestibuleFragment"
               android:name="com.example.myapplication.ui.vestibule.VestibuleFragment" android:label="fragment_vestibule"
-              tools:layout="@layout/fragment_vestibule"/>
+              tools:layout="@layout/fragment_vestibule">
+        <action android:id="@+id/action_vestibuleFragment_to_navigation_home" app:destination="@id/navigation_home"/>
+    </fragment>
     <fragment android:id="@+id/saleFragment" android:name="com.example.myapplication.ui.sale.SaleFragment"
-              android:label="fragment_sale" tools:layout="@layout/fragment_sale"/>
+              android:label="fragment_sale" tools:layout="@layout/fragment_sale">
+        <action android:id="@+id/action_saleFragment_to_navigation_home" app:destination="@id/navigation_home"/>
+    </fragment>
 </navigation>
