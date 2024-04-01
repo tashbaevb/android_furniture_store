@@ -34,8 +34,11 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        lotty_sale = binding.lottyWerbung;
-        lotty_sale.setAnimation(R.raw.animation_krolik);
+        lotty_werbung = binding.lottyWerbung;
+        lotty_werbung.setAnimation(R.raw.animation_krolik);
+
+        lotty_sale = binding.lottySale;
+        lotty_sale.setAnimation(R.raw.animation_fire);
 
         createList();
         adapter = new CategoryAdapter();
