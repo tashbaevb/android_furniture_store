@@ -65,7 +65,7 @@ public class MAdapter extends RecyclerView.Adapter<MAdapter.ViewHolder> {
 
                 bundle.putParcelableArrayList("favorite", selescted_list);
 
-                navController.navigate(R.id.descriptionFragment, bundle);
+//                navController.navigate(R.id.descriptionFragment, bundle);
             });
         }
     }

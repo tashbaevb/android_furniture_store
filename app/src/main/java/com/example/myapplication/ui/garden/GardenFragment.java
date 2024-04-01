@@ -20,6 +20,7 @@ import java.util.List;
 public class GardenFragment extends Fragment {
 
     private FragmentGardenBinding binding;
+
     List<FurnitureModel> list_bedroom = new ArrayList<>();
     MAdapter adapter;
     NavController navController;
@@ -40,24 +41,24 @@ public class GardenFragment extends Fragment {
 
     private void createList() {
         list_bedroom.add(new FurnitureModel("garden", "Сад Red Flame", "1690", "Кровать двухспальная размер 2.6м х 2.4м производство Турция," +
-                " матрас набивной пружинный, кокосовая стружка", R.drawable.Download));
+                " матрас набивной пружинный, кокосовая стружка", R.drawable.download));
         list_bedroom.add(new FurnitureModel("garden", "Садовая Red_sunrise", "1100",
                 " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," + "набивной, специальный состав"
-                , R.drawable.Download_2));
+                , R.drawable.download_2));
         list_bedroom.add(new FurnitureModel("garden", "Сад Plot", "1340",
                 " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," + "набивной, специальный состав"
-                , R.drawable.Download_3));
+                , R.drawable.download_3));
         list_bedroom.add(new FurnitureModel("garden", "Садовая Parlament", "1200",
                 " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," + "набивной, специальный состав"
-                , R.drawable.Download_4));
+                , R.drawable.download_4));
         list_bedroom.add(new FurnitureModel("garden", "Сад Red Flame", "1690",
-                "Кровать двухспальная размер 2.6м х 2.4м производство Турция," + " матрас набивной пружинный, кокосовая стружка", R.drawable.Download_5));
+                "Кровать двухспальная размер 2.6м х 2.4м производство Турция," + " матрас набивной пружинный, кокосовая стружка", R.drawable.download_5));
         list_bedroom.add(new FurnitureModel("garden", "Садовая Red_sunrise", "1100", " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," +
-                "набивной, специальный состав", R.drawable.Download));
+                "набивной, специальный состав", R.drawable.download));
         list_bedroom.add(new FurnitureModel("garden", "Сад Plot", "1340", " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," +
-                "набивной, специальный состав", R.drawable.Download_2));
+                "набивной, специальный состав", R.drawable.download_2));
         list_bedroom.add(new FurnitureModel("garden", "Сад Parlament", "1200", " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," +
-                "набивной, специальный состав", R.drawable.Download_3));
+                "набивной, специальный состав", R.drawable.download_3));
     }
 
     @Override

@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         lotty_sale = binding.lottyWerbung;
-        lotty_sale.setAnimation(R.raw.);
+        lotty_sale.setAnimation(R.raw.animation_krolik);
 
         createList();
         adapter = new CategoryAdapter();
@@ -46,8 +46,8 @@ public class HomeFragment extends Fragment {
     }
 
     private void createList() {
-        list_category.add(new CategoryModel("Мебель для спальни", R.drawable.Download_4));
-        list_category.add(new CategoryModel("Мебель для гостинной", R.drawable.Download));
+        list_category.add(new CategoryModel("Мебель для спальни", R.drawable.download_4));
+        list_category.add(new CategoryModel("Мебель для гостинной", R.drawable.download));
         list_category.add(new CategoryModel("Садовая мебель", R.drawable.garden));
         list_category.add(new CategoryModel("Кухонная мебель", R.drawable.kitchen));
         list_category.add(new CategoryModel("Юношеские гарнитуры", R.drawable.junior));

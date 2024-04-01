@@ -42,24 +42,24 @@ public class JuniorHeadSetFragment extends Fragment {
 
     private void createList() {
         list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Red Flame", "1690", "Кровать двухспальная размер 2.6м х 2.4м производство Турция," +
-                " матрас набивной пружинный, кокосовая стружка", R.drawable.Download));
+                " матрас набивной пружинный, кокосовая стружка", R.drawable.download));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Red_sunrise", "1100",
                 " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," + "набивной, специальный состав"
-                , R.drawable.Download_2));
+                , R.drawable.download_2));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Plot", "1340",
                 " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," + "набивной, специальный состав"
-                , R.drawable.Download_3));
+                , R.drawable.download_3));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Parlament", "1200",
                 " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," + "набивной, специальный состав"
-                , R.drawable.Download_4));
+                , R.drawable.download_4));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Red Flame", "1690",
-                "Кровать двухспальная размер 2.6м х 2.4м производство Турция," + " матрас набивной пружинный, кокосовая стружка", R.drawable.Download_5));
+                "Кровать двухспальная размер 2.6м х 2.4м производство Турция," + " матрас набивной пружинный, кокосовая стружка", R.drawable.download_5));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Red_sunrise", "1100", " производство Италия, размер 2.6м х 2.4м" + " Mario Fabric " + "отделка: натуральнаая кожа  и гобелен," +
-                "набивной, специальный состав", R.drawable.Download));
+                "набивной, специальный состав", R.drawable.download));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Jun Plot", "1340", " производство Италия, размер 2.2м х 2.15м" + " Riotello " + "отделка: хлопок и гобелен," +
-                "набивной, специальный состав", R.drawable.Download_2));
+                "набивной, специальный состав", R.drawable.download_2));
         list_junior_headset.add(new FurnitureModel("junior_headset", "Junior Parlament", "1200", " производство Италия, размер 2.2м х 2.4м" + "Mario Fabric " + "отделка: хлопок и атлас," +
-                "набивной, специальный состав", R.drawable.Download_3));
+                "набивной, специальный состав", R.drawable.download_3));
     }
 
     @Override
