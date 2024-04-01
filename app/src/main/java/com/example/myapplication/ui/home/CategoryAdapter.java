@@ -2,7 +2,6 @@ package com.example.myapplication.ui.home;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.ItemCategoryBinding;
 import com.example.myapplication.models.CategoryModel;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +19,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     List<CategoryModel> main_list = new ArrayList<>();
     ItemCategoryBinding binding;
     NavController navController;
+
+    public void setMain_list(List<CategoryModel> main_list) {
+        this.main_list = main_list;
+    }
 
     @NonNull
     @Override

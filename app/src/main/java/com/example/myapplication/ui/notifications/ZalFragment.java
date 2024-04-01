@@ -9,10 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.myapplication.databinding.FragmentNotificationsBinding;
+import com.example.myapplication.databinding.FragmentZalBinding;
+
+import java.util.List;
 
 public class ZalFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentZalBinding binding;
+    List<>
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
